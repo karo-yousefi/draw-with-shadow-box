@@ -1,7 +1,12 @@
+import MainComponent from "./components/MainComponent"
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div></div>
+    <div>
+      <MainComponent />
+      <Footer />
+    </div>
   )
 }
 
