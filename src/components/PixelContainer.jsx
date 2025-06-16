@@ -5,6 +5,8 @@ import Pixel from './Pixel';
 const PixelContainer = ({ row, col }) => {
   const [pixelArray, setPixelArray] = useState([]);
 
+  // console.log(pixelArray);
+
   useEffect(() => {
     const newArray = Array(row * col).fill(null).map((_, index) => ({
       id: index,
