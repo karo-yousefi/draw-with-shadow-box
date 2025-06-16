@@ -8,10 +8,26 @@ const MainComponent = () => {
 	const [rowCount, setRowCount] = useState(0);
 	const [size, setSize] = useState(0);
 
-	console.log(size);
 
 	const createCode = () => {
+		let shadows = ``;
+		pixelArray.map(pixle => {
+			if (pixle.isTransparent) {
+				return;
+			}
 
+			shadows = shadows + `
+				${size * (pixle.col + 1)}px ${size * (pixle.row + 1)}px 0px 0px ${pixle.color},
+			`;
+
+		})
+
+
+		console.log(`
+			box-shadow: 
+				${shadows}
+			;
+		`);
 	}
 
 	return (
